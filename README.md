@@ -3,11 +3,14 @@
      可参考https://support.huaweicloud.com/bestpractice-servicestage/servicestage_bestpractice_0048.html
      conf/chassis.yaml的listenAddress改为注册中心的地址。   
      microservice.yaml中的APPLICATION_ID最好和provider的APPLICATION_ID相同。
-  运行mesher, mesher-1.3.3-windows-amd64\start.bat
+
+     运行mesher
+     mesher-1.3.3-windows-amd64\start.bat
 
 第二：配置provider
      打开java-provider\src\main\resources\microservice.yaml
-     配置service.registry.address改为注册中心的地址。    
+     配置service.registry.address改为注册中心的地址。  
+
       运行provider
       1.cd java-provider; mvn clean package
       2.cd target ; java -jar demo-0.0.1-SNAPSHOT.jar
