@@ -18,7 +18,7 @@
 第二：配置node
       打开node-client/website/server.js
       1.修改端口号为Mesh监听端口30101
-      2.将原来的IP:Port替换为http://微服务名/请求路径
+      2.将原来的IP:Port替换为http://微服务名/请求路径, 如本例的路径为http://HelloServiceComb/hello'
 
       运行node
       1. cd node-client\website 
