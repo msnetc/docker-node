@@ -2,7 +2,7 @@
 
 var express = require('express');
 
-var PORT = 8888;
+var PORT = 80;
 
 var app = express();
 app.get('/', function (req, res) {
