@@ -2,17 +2,15 @@ version:  '3'
 services:
   mesher-consumer:
     image: gochassis/mesher:1.5rc
-    environment:
-      CSE_REGISTRY_ADDR: http://192.168.1.101:30100
+    environment:      
+      CSE_REGISTRY_ADDR: http://127.0.0.1:30100
       SERVICE_NAME: "mesher-consumer"
-    network_mode: "service:php-client"
+    network_mode: "service:node-client-example"
     depends_on:
-      - node-client  
-  node-client:
+      - node-client-example  
+  node-client-example:
     build: ./node-client
     environment:
       http_proxy: http://127.0.0.1:30101
     ports:
       - 8888:80
-    links:
-      - ServiceCenter
