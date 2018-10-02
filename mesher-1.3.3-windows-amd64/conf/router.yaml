@@ -1,0 +1,12 @@
+#routeRule:
+#  ShoppingCart: #这里就是请求里的host,也是sc里的service name
+#    - precedence: 2 #路由规则优先级 越大优先级越高，请求会先进入优先级最高的路由规则进行匹配
+#      route: #路由规则列表
+#      - tags:
+#          version: 0.2 #对接service center的话，如果不填就自动为0.1
+#          app: HelloWorld #对接service center的话，如果不填就自动为default
+#        weight: 80 #全重 80%到这里
+#      - tags:
+#          version: 1.2
+#          app: HelloWorld
+#        weight: 20 #全重 20%到这里

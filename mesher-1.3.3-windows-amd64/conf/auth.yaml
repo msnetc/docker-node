@@ -1,0 +1,6 @@
+## Huawei Public Cloud ak/sk
+cse.credentials.accessKey:
+cse.credentials.secretKey:
+cse.credentials.project:
+## Cipher plugin name, used to decrypt sk when it is encrypted
+#cse.credentials.akskCustomCipher:

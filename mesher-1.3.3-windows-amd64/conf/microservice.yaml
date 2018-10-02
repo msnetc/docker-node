@@ -1,0 +1,11 @@
+## microservice property
+#APPLICATION_ID: default # application name
+APPLICATION_ID: medsci-pass
+service_description:
+  name: hellonode 
+  version: 0.0.1
+  properties:
+    allowCrossApp: true
+#  version: 0.1 # microservice version
+#  properties: # custom properties
+#    allowCrossApp: true # allow calls across applications

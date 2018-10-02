@@ -1,0 +1,6 @@
+# Router rules and fault injection rules are moved to router.yaml
+#plugin:
+#  destinationResolver: host #用户可自定义如何将host转为换destination name，默认为host直接就是service name，
+#admin: #admin API
+#  serverUri : 127.0.0.1:30102 # 在哪个地址监听
+#  goRuntimeMetrics : true # 是否开启go 运行时监控
