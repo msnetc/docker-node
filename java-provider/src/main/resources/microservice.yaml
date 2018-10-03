@@ -2,6 +2,8 @@ APPLICATION_ID: medsci-pass
 service_description:
   name: HelloServiceComb
   version: 0.0.1
+  properties:
+    allowCrossApp: true # enable cross app invocation
 servicecomb:
   handler:
     chain:
@@ -12,5 +14,5 @@ servicecomb:
     address: 0.0.0.0:9080
   service:
     registry:
-      address: http://192.168.1.101:30100
+      address: http://127.0.0.1:30100
       autodiscovery: false
