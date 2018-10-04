@@ -1,8 +1,6 @@
-## microservice property
-APPLICATION_ID: medsci-pass
+APPLICATION_ID: 
 service_description:
-  name: HelloServiceComb
-  version: 0.0.1
-  environment:  #microservice environment
+  name: mesher-consumer
+  version: 
   properties:
-    allowCrossApp: false #whether to allow calls across applications
+    allowCrossApp: true

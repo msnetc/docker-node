@@ -1,18 +1,20 @@
 version:  '3'
 services:
-  node-client:
-    build: ./node-client
-    environment:
-      http_proxy: http://127.0.0.1:30101
-    network_mode: "service:mesher-consumer"
-    depends_on:
-      - mesher-consumer  
   mesher-consumer:
-    #image: medci-mesher
-    build: ./mesher-linux
-    ports:
-      - 81:80
+    image: gochassis/mesher:1.5rc
+    restart: always
+    volumes:
+      - ./mesher-linux/conf/:/opt/mesher/conf
     environment:
       CSE_REGISTRY_ADDR: http://192.168.1.101:30100
       SERVICE_NAME: "mesher-consumer"
-
+    network_mode: "service:node-client"
+    depends_on:
+      - node-client
+  node-client:
+    build: ./node-client
+    restart: always
+    environment:
+      http_proxy: http://127.0.0.1:30101
+    ports:
+      - 8888:80
