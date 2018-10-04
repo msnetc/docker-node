@@ -9,14 +9,9 @@ services:
     depends_on:
       - mesher-consumer  
   mesher-consumer:
-    #image: medci-mesher
-    #build: ./mesher-linux
     image: gochassis/mesher
     restart: always
     volumes:
       - ./mesher-linux/conf/:/opt/mesher/conf
     ports:
-      - 81:80
-    environment:
-      CSE_REGISTRY_ADDR: http://192.168.1.101:30100
-      SERVICE_NAME: "mesher-consumer"
+      - 88888:80

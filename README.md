@@ -6,11 +6,11 @@
  2.curl http://localhost:8888, 校验是否返回 返回"hello world" 成功
 
 linux下部署注意: mesher的配置有两种方式
-
  1. docker-compose.yml 文件默认采取设置ENV的方式,ENV名字参考./mesher-linux/start.sh 文件
 
  2. docker-compose.conf.yml 采取加载conf文件的方式
-两种方式不能混合使用.
+    参考 windows下运行/配置mesher的方式
+两种方式不能混合使用, 建议使用第二种方式。
 
 ## windows下运行: 
 
