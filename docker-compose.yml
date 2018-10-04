@@ -3,11 +3,12 @@ services:
   mesher-consumer:
     image: gochassis/mesher:1.5rc
     restart: always
-    volumes:
-      - ./mesher-linux/conf/:/opt/mesher/conf
+    #volumes:
+    #  - ./mesher-linux/conf/:/opt/mesher/conf
     environment:
       CSE_REGISTRY_ADDR: http://192.168.1.101:30100
       SERVICE_NAME: "mesher-consumer"
+      APP_ID: "medsci-pass"
     network_mode: "service:node-client"
     depends_on:
       - node-client

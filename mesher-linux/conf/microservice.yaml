@@ -1,4 +1,4 @@
-APPLICATION_ID: 
+APPLICATION_ID: medsci-pass
 service_description:
   name: mesher-consumer
   version: 
