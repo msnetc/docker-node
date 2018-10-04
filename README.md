@@ -28,15 +28,12 @@
 
 linux下运行：
  准备条件：有docker,docker-compose 环境
-
  1.执行 docker-compose up， 运行node和mesher
+ 2.curl http://localhost:8888, 校验是否返回 返回"hello world" 成功
 
- 2.curl http://localhost:8888, 校验是否返回 返回"hello world"
+linux下部署注意: mesher的配置有两种方式
 
-发现问题：
+ 1. docker-compose.yml 文件默认采取设置ENV的方式,ENV名字参考./mesher-linux/start.sh 文件
 
-  当容器运行时，mesher-linux/conf中的app_id被自动清空，导致访问微服务失败。
-  error:lb: FindMicroServiceInstances failed, ProviderID: HelloServic
-                    eComb, err: FindMicroServiceInstances failed, appID/MicroServ
-                    iceName/version: default/HelloServiceComb/0+, response Status
-                    Code: 400, respon...
+ 2. docker-compose.conf.yml 采取加载conf文件的方式
+两种方式不能混合使用.
