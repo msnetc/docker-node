@@ -27,11 +27,11 @@
       3. curl http://localhost 返回"hello world"
 
 linux下运行：
- 准备条件：有docker,docker-compose 环境。
- 1.执行 docker-compose up， 运行node和mesher。
+ 准备条件：有docker,docker-compose 环境
+
+ 1.执行 docker-compose up， 运行node和mesher
 
  2.curl http://localhost:8888, 校验是否返回 返回"hello world"
-
 
 发现问题：
 
