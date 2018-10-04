@@ -1,4 +1,19 @@
-# windows下node作为consumer使用mesher连接java的provider服务
+# linux/windows环境下node作为consumer使用mesher连接java的provider服务
+## linux下运行：
+
+ 准备条件：有docker,docker-compose 环境
+ 1.执行 docker-compose up， 运行node和mesher
+ 2.curl http://localhost:8888, 校验是否返回 返回"hello world" 成功
+
+linux下部署注意: mesher的配置有两种方式
+
+ 1. docker-compose.yml 文件默认采取设置ENV的方式,ENV名字参考./mesher-linux/start.sh 文件
+
+ 2. docker-compose.conf.yml 采取加载conf文件的方式
+两种方式不能混合使用.
+
+## windows下运行: 
+
 第一 配置mesher
      可参考https://support.huaweicloud.com/bestpractice-servicestage/servicestage_bestpractice_0048.html
      conf/chassis.yaml的listenAddress改为注册中心的地址。   
@@ -26,14 +41,3 @@
       2. node server.js
       3. curl http://localhost 返回"hello world"
 
-linux下运行：
- 准备条件：有docker,docker-compose 环境
- 1.执行 docker-compose up， 运行node和mesher
- 2.curl http://localhost:8888, 校验是否返回 返回"hello world" 成功
-
-linux下部署注意: mesher的配置有两种方式
-
- 1. docker-compose.yml 文件默认采取设置ENV的方式,ENV名字参考./mesher-linux/start.sh 文件
-
- 2. docker-compose.conf.yml 采取加载conf文件的方式
-两种方式不能混合使用.
