@@ -4,7 +4,7 @@ services:
     build: ./java-provider
     restart: always
     ports:
-      - 8080:8080      
+      - 8383:8090      
   node-client:
     build: ./node-client
     restart: always
