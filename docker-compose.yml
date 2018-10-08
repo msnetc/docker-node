@@ -3,8 +3,9 @@ services:
   java-provider:
     build: ./java-provider
     restart: always
+    network_mode: "host" 
     ports:
-      - 8080:8080      
+      - 8181:8080      
   node-client:
     build: ./node-client
     restart: always
@@ -17,9 +18,9 @@ services:
     image: gochassis/mesher
     restart: always
     environment:
-      CSE_REGISTRY_ADDR: http://192.168.1.101:30100
+      CSE_REGISTRY_ADDR: http://10.0.1.251:30103
       SERVICE_NAME: "mesher-consumer"
       APP_ID: "medsci-pass"
       network_mode: "service:node-client" 
     ports:
-      - 8888:80
+      - 8282:80
