@@ -15,10 +15,10 @@ linux下部署注意: mesher的配置有两种方式
 ## windows下运行: 
 
 第一 配置mesher
-     可参考https://support.huaweicloud.com/bestpractice-servicestage/servicestage_bestpractice_0048.html
+     mesher下载地址：https://cse-bucket.obs.myhwclouds.com/Mesher/mesher-1.4.12-windows-amd64.zip
+     meshe配置可参考https://support.huaweicloud.com/bestpractice-servicestage/servicestage_bestpractice_0048.html
      conf/chassis.yaml的listenAddress改为注册中心的地址。   
      microservice.yaml中的APPLICATION_ID最好和provider的APPLICATION_ID相同。
-
      运行mesher
      mesher-1.3.3-windows-amd64\start.bat
 

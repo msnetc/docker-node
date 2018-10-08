@@ -1,2 +1,7 @@
-﻿## 忽略models文件夹
+## 忽略models文件夹
 */node_modules/
+.idea/workspace.xml
+.idea/modules.xml
+.idea/misc.xml
+.idea/docker-node.iml
+node-client/package-lock.json

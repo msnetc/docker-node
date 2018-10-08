@@ -5,7 +5,7 @@ services:
     restart: always
     network_mode: "host" 
     ports:
-      - 8181:8080      
+      - 8383:8090      
   node-client:
     build: ./node-client
     restart: always
